@@ -4854,4 +4854,24 @@ p.font-semibold {
         font-size: 0.9rem;
     }
 
+}/* =========================================================
+   HERO — REMOVE TOP GAP
+   ========================================================= */
+
+/*
+   The navigation currently leaves an empty vertical area
+   before the Hero begins.
+
+   Pull the Hero upward by the exact gap while adding the
+   same amount back as internal Hero spacing, so the content
+   itself does NOT jump upward.
+*/
+
+@media screen and (min-width: 1024px) {
+
+    #hero {
+        margin-top: -72px !important;
+        padding-top: calc(72px + 0px) !important;
+    }
+
 }
