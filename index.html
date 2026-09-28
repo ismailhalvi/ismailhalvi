@@ -1,0 +1,3451 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Ismail Halvi | Front-End Developer</title>
+
+    <meta name="description"
+        content="Portfolio of Ismail Halvi, a Junior Front-End Developer and Web Design and Coding graduate. Explore my projects, skills, and experience in responsive web development and modern user interfaces.">
+
+    <meta name="author" content="Ismail Halvi">
+
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ismail Halvi | Junior Front-End Developer">
+    <meta property="og:description"
+        content="Explore my portfolio, projects, and web development work as a Junior Front-End Developer.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="img/fav.webp">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@1.48.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="text-slate-800 dark:text-slate-100">
+
+    <canvas id="canvas-bg"></canvas>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card rounded-none border-t-0 border-x-0" aria-label="Primary Navigation">
+
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+
+            <!-- Logo -->
+            <a href="#hero" class="flex items-center space-x-3 group z-50" aria-label="Go to homepage">
+
+                <div class="relative">
+
+                    <!-- Purple / Pink Glow -->
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-tr from-purple-500 via-fuchsia-500 to-pink-500 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <!-- Logo -->
+                    <div
+                        class="relative w-12 h-12 rounded-full overflow-hidden shadow-[0_0_18px_rgba(168,85,247,0.25)] group-hover:scale-105 transition-transform duration-300 border-[2px] border-purple-400/30 bg-[#160720] flex items-center justify-center ring-1 ring-purple-400/10 group-hover:ring-purple-400/30">
+
+                        <img src="img/logo 2.webp" alt="Ismail Halvi Logo"
+                            class="w-full h-full object-cover p-[2px] rounded-full">
+
+                    </div>
+
+                </div>
+
+
+                <!-- Brand Text -->
+                <div class="hidden sm:flex flex-col">
+
+                    <span class="text-sm font-extrabold text-white uppercase tracking-widest">
+                        ISMAIL HALVI
+                    </span>
+
+                    <span class="text-[10px] text-purple-400 font-bold tracking-widest mt-0.5">
+                        FRONT-END DEVELOPER
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-5 xl:space-x-6">
+
+                <div class="flex items-center space-x-5 xl:space-x-6 text-sm font-medium whitespace-nowrap">
+
+                    <a href="#about" class="nav-link text-slate-300">
+                        About
+                    </a>
+
+                    <a href="#education" class="nav-link text-slate-300">
+                        Education
+                    </a>
+
+                    <a href="#skills" class="nav-link text-slate-300">
+                        Skills
+                    </a>
+
+                    <a href="#experience" class="nav-link text-slate-300">
+                        Experience
+                    </a>
+
+                    <a href="#services" class="nav-link text-slate-300">
+                        Services
+                    </a>
+
+                    <a href="#projects" class="nav-link text-slate-300">
+                        Projects
+                    </a>
+
+                    <a href="#achievements" class="nav-link text-slate-300">
+                        Milestones
+                    </a>
+
+                    <a href="#contact" class="nav-link text-slate-300">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- CV -->
+                <a href="https://drive.google.com/file/d/1ETSgIGVdQFVMk1IWg8pmThTQTFhiVlEr/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer"
+                    class="flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-500 rounded-full hover:from-purple-500 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:-translate-y-0.5">
+
+                    <i data-lucide="file-text" class="w-4 h-4 mr-2">
+                    </i>
+
+                    CV
+
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-2 lg:hidden">
+
+
+                <!-- CV -->
+                <a href="https://drive.google.com/file/d/1ETSgIGVdQFVMk1IWg8pmThTQTFhiVlEr/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" aria-label="Open CV"
+                    class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white shadow-lg shadow-purple-500/20">
+
+                    <i data-lucide="file-text" class="w-4 h-4">
+                    </i>
+
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    class="w-10 h-10 rounded-full border border-purple-400/20 bg-purple-500/5 flex items-center justify-center text-slate-200 hover:bg-purple-500/10 hover:border-purple-400/40 transition-all">
+
+                    <i data-lucide="menu" class="w-5 h-5">
+                    </i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="mobile-menu lg:hidden border-t border-purple-500/10 bg-[#0d0015]/95 backdrop-blur-xl">
+
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-1">
+
+
+                <a href="#about" class="mobile-nav-link">
+                    About
+                </a>
+
+                <a href="#education" class="mobile-nav-link">
+                    Education
+                </a>
+
+                <a href="#skills" class="mobile-nav-link">
+                    Skills
+                </a>
+
+                <a href="#experience" class="mobile-nav-link">
+                    Experience
+                </a>
+
+                <a href="#services" class="mobile-nav-link">
+                    Services
+                </a>
+
+                <a href="#projects" class="mobile-nav-link">
+                    Projects
+                </a>
+
+                <a href="#achievements" class="mobile-nav-link">
+                    Milestones
+                </a>
+
+                <a href="#contact" class="mobile-nav-link">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main class="pt-16">
+
+        <!-- 1. Hero -->
+        <section id="hero"
+            class="min-h-screen px-6 md:px-10 lg:px-16 relative overflow-hidden flex items-start lg:items-center pt-28 pb-16 lg:pt-0 lg:pb-0">
+
+            <!-- Hero Ambient Background -->
+            <div class="hero-ambient hero-ambient-purple" aria-hidden="true">
+            </div>
+
+            <div class="hero-ambient hero-ambient-pink" aria-hidden="true">
+            </div>
+
+
+            <!-- Hero Content -->
+            <div
+                class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center relative z-10">
+
+                <!-- RIGHT ON DESKTOP / TOP ON MOBILE: Profile -->
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative opacity-0 hero-text">
+
+                    <!-- Profile Ambient Glow -->
+                    <div class="hero-profile-glow" aria-hidden="true">
+                    </div>
+
+
+                    <!-- Profile Container -->
+                    <div class="hero-profile-container relative">
+
+                        <!-- Decorative Ring -->
+                        <div class="hero-ring hero-ring-purple" aria-hidden="true">
+                        </div>
+
+                        <div class="hero-ring hero-ring-pink" aria-hidden="true">
+                        </div>
+
+
+                        <!-- Clickable Profile -->
+                        <button id="hero-profile-button" type="button" class="hero-profile-button"
+                            aria-label="Enlarge Ismail Halvi profile photo" aria-pressed="false">
+
+                            <img src="img/me.webp" alt="Ismail Halvi" id="profile-img"
+                                class="w-full h-full object-cover">
+
+                        </button>
+
+
+                        <!-- Developer Badge -->
+                        <div
+                            class="hero-profile-badge absolute -bottom-2 right-2 md:right-0 flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#160720]/90 backdrop-blur-md border border-purple-400/20 shadow-xl shadow-purple-900/30">
+
+                            <span class="w-2.5 h-2.5 rounded-full bg-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.8)]">
+                            </span>
+
+                            <span class="text-xs font-semibold text-slate-200">
+
+                                Front-End Developer
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- Small Decorative Accent -->
+                        <div
+                            class="absolute -top-3 left-4 md:left-0 w-10 h-10 rounded-full bg-[#160720] border border-pink-500/20 flex items-center justify-center shadow-lg shadow-pink-900/20">
+
+                            <i data-lucide="code-2" class="w-4 h-4 text-pink-400">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEFT ON DESKTOP / BELOW PHOTO ON MOBILE: Hero Information -->
+                <div class="order-2 lg:order-1 text-center lg:text-left w-full">
+
+                    <!-- Eyebrow -->
+                    <p
+                        class="text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-purple-400 mb-4 md:mb-5 opacity-0 hero-text">
+
+                        Front-End Developer
+
+                    </p>
+
+
+                    <!-- Name -->
+                    <h1
+                        class="hero-name text-[clamp(2.75rem,12vw,4.5rem)] md:text-7xl xl:text-8xl font-extrabold leading-[1.05] tracking-tight mb-5 md:mb-6 opacity-0 hero-text text-white">
+
+                        Ismail
+                        <span class="inline sm:block gradient-text">
+                            Halvi
+                        </span>
+
+                    </h1>
+
+
+                    <!-- Job Title -->
+                    <p class="text-lg md:text-2xl font-medium text-slate-300 mb-5 md:mb-6 opacity-0 hero-text">
+
+                        Junior Front-End Developer
+
+                    </p>
+
+
+                    <!-- Description -->
+                    <p
+                        class="text-base md:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 md:mb-10 opacity-0 hero-text">
+
+                        Building modern, responsive, and user-friendly web experiences
+                        with clean code and thoughtful interfaces.
+
+                    </p>
+
+
+                    <!-- Hero Actions -->
+                    <div
+                        class="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-3 md:gap-4 opacity-0 hero-text">
+
+                        <!-- Primary CTA -->
+                        <a href="#projects"
+                            class="hero-primary-btn inline-flex items-center justify-center gap-2 px-8 py-4 md:px-7 md:py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow-lg shadow-purple-600/20 transition-all duration-300">
+
+                            VIEW PROJECTS
+
+                            <i data-lucide="arrow-down-right" class="w-4 h-4">
+                            </i>
+
+                        </a>
+
+
+                        <!-- Secondary CTA -->
+                        <a href="#contact"
+                            class="hero-secondary-btn inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-purple-400/25 bg-purple-500/5 text-slate-200 font-semibold transition-all duration-300">
+
+                            CONTACT ME
+
+                            <i data-lucide="mail" class="w-4 h-4">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Small Intro Line -->
+                    <div
+                        class="hero-intro-line mt-8 md:mt-10 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-500 opacity-0 hero-text">
+
+                        <span class="hero-intro-line-decoration w-8 h-px bg-purple-500/40">
+                        </span>
+
+                        <span>
+                            Web Design & Coding Graduate · 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Discover -->
+            <a href="#about"
+                class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-slate-500 hover:text-purple-400 transition-colors opacity-0 hero-text">
+
+                <span class="text-[10px] uppercase tracking-[0.3em] mb-2 font-semibold">
+
+                    Discover
+
+                </span>
+
+                <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce">
+                </i>
+
+            </a>
+
+        </section>
+
+
+
+
+
+
+        <!-- 2. About Me -->
+        <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+
+            <!-- Section Heading -->
+            <div class="mb-12">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-purple-400 mb-3">
+                    Get to Know Me
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-white">
+                    About Me
+                </h2>
+
+            </div>
+
+
+            <!-- About Card -->
+            <div class="glass-card p-8 md:p-12 border border-purple-500/15">
+
+
+                <!-- Intro -->
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-slate-200 mb-8">
+
+                    I’m
+                    <span class="text-purple-400 font-semibold">
+                        Ismail Halvi
+                    </span>,
+                    a Junior Front-End Developer and Web Design and Coding graduate
+                    passionate about building modern, responsive, and user-friendly
+                    web experiences.
+
+                </p>
+
+
+                <!-- Journey -->
+                <div class="space-y-5 text-slate-400 leading-relaxed">
+
+                    <p>
+                        My journey into web development started with
+                        <strong class="font-medium text-slate-200">
+                            HTML and CSS
+                        </strong>,
+                        where I developed a strong interest in creating clean and
+                        responsive interfaces. I then expanded my skills by learning
+                        JavaScript, React, Tailwind CSS, Bootstrap, and Sass, while
+                        continuously improving my understanding of modern front-end
+                        development practices.
+                    </p>
+
+
+                    <p>
+                        I graduated in 2026 with an
+                        <strong class="font-medium text-slate-200">
+                            Associate Degree in Web Design and Coding
+                        </strong>
+                        from Anadolu University. Throughout my studies and practical
+                        learning, I worked on different web projects that helped me
+                        strengthen my skills in responsive design, component-based
+                        development, API integration, and modern CSS frameworks.
+                    </p>
+
+
+                    <p>
+                        Alongside my development journey, I gained practical technical
+                        experience as a
+                        <strong class="font-medium text-slate-200">
+                            Technical Student Supervisor at Cloud Soft
+                        </strong>,
+                        where I supported students with coding and technical problems,
+                        reviewed and corrected code, and helped them understand and
+                        solve web development issues.
+                    </p>
+
+                    <p>
+                        I’m highly self-directed when it comes to learning and problem-solving.
+                        I rely on
+                        <strong class="font-medium text-slate-200">
+                            independent research
+                        </strong>
+                        to understand unfamiliar topics, investigate technical issues, and find
+                        solutions on my own before seeking assistance. I enjoy exploring reliable
+                        sources, comparing different approaches, and testing solutions until I
+                        understand the problem and find an effective way forward.
+                    </p>
+                    <p>
+                        I also use
+                        <strong class="font-medium text-purple-300">
+                            AI-assisted development workflows
+                        </strong>
+                        as part of my learning and programming process. I’m comfortable
+                        writing structured and detailed prompts, providing the necessary
+                        context and constraints, and guiding AI tools toward the type of
+                        result I need. I then review, test, refine, and integrate the
+                        output into my work rather than relying on it without verification.
+                    </p>
+
+
+                    <p>
+                        Today, I’m focused on continuously improving my front-end skills,
+                        building better projects, and gaining professional experience in
+                        a real-world development environment.
+                    </p>
+
+                </div>
+
+
+                <!-- AI-Assisted Development Highlight -->
+                <div
+                    class="about-ai-card mt-10 p-5 md:p-6 rounded-2xl border border-purple-500/15 bg-purple-500/[0.035]">
+
+                    <div class="flex items-start gap-4">
+
+                        <!-- Icon -->
+                        <div
+                            class="about-ai-icon shrink-0 w-11 h-11 rounded-xl flex items-center justify-center border border-purple-400/20 bg-purple-500/10">
+
+                            <i data-lucide="sparkles" class="w-5 h-5 text-purple-300">
+                            </i>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div>
+
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+
+                                <h3 class="text-lg md:text-xl font-semibold text-white">
+                                    AI-Assisted Development
+                                </h3>
+
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-[0.18em] text-pink-400 border border-pink-500/15 bg-pink-500/5 px-2.5 py-1 rounded-full">
+                                    AI + Coding
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-sm md:text-base text-slate-400 leading-relaxed">
+
+                                Using AI as a development assistant for coding,
+                                troubleshooting, idea exploration, and improving
+                                solutions through clear prompting, context, constraints,
+                                testing, and human review.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mission / Core Focus -->
+                <div class="grid md:grid-cols-2 gap-8 mt-12 pt-8 border-t border-purple-500/10">
+
+
+                    <!-- Mission -->
+                    <div>
+
+                        <h3 class="text-xl font-semibold mb-4 flex items-center text-white">
+
+                            <span
+                                class="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/15 flex items-center justify-center mr-3">
+
+                                <i data-lucide="target" class="w-5 h-5 text-purple-400">
+                                </i>
+
+                            </span>
+
+                            My Mission
+
+                        </h3>
+
+
+                        <p class="text-slate-400 leading-relaxed">
+
+                            My goal is to continuously improve my front-end development
+                            skills, create meaningful and user-friendly web experiences,
+                            and grow professionally by working on real-world projects
+                            and learning from practical experience.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Core Focus -->
+                    <div>
+
+                        <h3 class="text-xl font-semibold mb-4 flex items-center text-white">
+
+                            <span
+                                class="w-9 h-9 rounded-xl bg-pink-500/10 border border-pink-500/15 flex items-center justify-center mr-3">
+
+                                <i data-lucide="zap" class="w-5 h-5 text-pink-400">
+                                </i>
+
+                            </span>
+
+                            Core Focus
+
+                        </h3>
+
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="skill-tag">
+                                Front-End Development
+                            </span>
+
+                            <span class="skill-tag">
+                                Responsive Web Design
+                            </span>
+
+                            <span class="skill-tag">
+                                JavaScript & React
+                            </span>
+
+                            <span class="skill-tag">
+                                Tailwind CSS & Bootstrap
+                            </span>
+
+                            <span class="skill-tag">
+                                Sass & Modern CSS
+                            </span>
+
+                            <span class="skill-tag">
+                                AI-Assisted Development
+                            </span>
+
+                            <span class="skill-tag">
+                                Prompt Engineering
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 3. Education & Achievements -->
+        <section id="education" class="py-24 px-6 relative overflow-hidden">
+
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Section Heading -->
+                <div class="education-heading mb-14">
+
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-purple-400 mb-3">
+                        Academic Journey
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold section-title text-white">
+                        Education & Achievements
+                    </h2>
+
+                    <p class="education-heading-description mt-4 max-w-2xl text-slate-400 leading-relaxed">
+                        A summary of my academic background, honors, and continuous learning journey in web development
+                        and programming.
+                    </p>
+
+                </div>
+
+
+                <!-- Education Timeline -->
+                <div class="education-timeline space-y-14">
+
+
+                    <!-- =====================================================
+                 Academic Degree
+                 ===================================================== -->
+
+                    <div class="education-timeline-item">
+
+                        <!-- Timeline Point -->
+                        <div class="education-timeline-point education-point-purple" aria-hidden="true">
+                        </div>
+
+
+                        <!-- Timeline Content -->
+                        <div class="education-timeline-content">
+
+                            <!-- Label -->
+                            <div
+                                class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-purple-400 mb-3">
+
+                                <span class="education-label-icon">
+
+                                    <i data-lucide="graduation-cap" class="w-4 h-4">
+                                    </i>
+
+                                </span>
+
+                                Education
+
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">
+
+                                Associate Degree in Web Design and Coding
+
+                            </h3>
+
+
+                            <!-- University / Date -->
+                            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-lg">
+
+                                <span class="text-purple-400 font-semibold">
+
+                                    Anadolu University
+
+                                </span>
+
+                                <span class="hidden sm:inline text-slate-700" aria-hidden="true">
+                                    |
+                                </span>
+
+                                <span class="inline-flex items-center gap-1.5 text-sm text-slate-500 font-medium">
+
+                                    <i data-lucide="calendar" class="w-4 h-4">
+                                    </i>
+
+                                    2024 - 2026
+
+                                </span>
+
+                            </div>
+
+
+                            <!-- Education Description -->
+                            <p class="mt-5 text-slate-400 leading-relaxed max-w-3xl">
+
+                                Completed an Associate Degree in Web Design and Coding,
+                                developing practical knowledge in web development,
+                                responsive design, front-end technologies, and modern
+                                web development practices.
+
+                            </p>
+
+
+                            <!-- Education Tags -->
+                            <div class="flex flex-wrap gap-2 mt-6">
+
+                                <span class="skill-tag text-xs font-semibold">
+                                    Web Design
+                                </span>
+
+                                <span class="skill-tag text-xs font-semibold">
+                                    Web Development
+                                </span>
+
+                                <span class="skill-tag text-xs font-semibold">
+                                    Front-End Development
+                                </span>
+
+                                <span class="skill-tag text-xs font-semibold">
+                                    Responsive Web Design
+                                </span>
+
+                            </div>
+
+
+                            <!-- Diploma -->
+                            <div class="mt-6">
+
+                                <a href="https://drive.google.com/file/d/1_CvOu-EyI0I5r-x83AvbhfbBcZqCjqW2/view"
+                                    target="_blank" rel="noopener noreferrer" class="education-document-link">
+
+                                    <i data-lucide="external-link" class="w-4 h-4">
+                                    </i>
+
+                                    View Diploma
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================================
+                 Academic Honors
+                 ===================================================== -->
+
+                    <div class="education-timeline-item">
+
+                        <!-- Timeline Point -->
+                        <div class="education-timeline-point education-point-gradient" aria-hidden="true">
+                        </div>
+
+
+                        <!-- Timeline Content -->
+                        <div class="education-timeline-content">
+
+                            <!-- Label -->
+                            <div
+                                class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-pink-400 mb-3">
+
+                                <span class="education-label-icon education-label-icon-pink">
+
+                                    <i data-lucide="award" class="w-4 h-4">
+                                    </i>
+
+                                </span>
+
+                                Academic Honors
+
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">
+
+                                Academic Recognition
+
+                            </h3>
+
+
+                            <!-- Honor Cards -->
+                            <div class="space-y-4">
+
+
+                                <!-- Yüksek Onur — Fall -->
+                                <article class="education-achievement-card education-achievement-purple">
+
+                                    <div class="education-achievement-header">
+
+                                        <div>
+
+                                            <h4 class="font-bold text-slate-100 text-lg">
+
+                                                Yüksek Onur Öğrencisi
+
+                                            </h4>
+
+                                            <p class="text-purple-400 text-sm font-semibold mt-1">
+
+                                                2025 - 2026 Academic Year · Fall Semester
+
+                                            </p>
+
+                                        </div>
+
+                                        <span class="education-achievement-icon education-achievement-icon-purple"
+                                            aria-hidden="true">
+
+                                            <i data-lucide="award" class="w-5 h-5">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+
+                                        Academic honor recognition awarded by Anadolu University
+                                        for outstanding academic achievement.
+
+                                    </p>
+
+
+                                    <div class="mt-5">
+
+                                        <a href="https://drive.google.com/file/d/1mYb6DoLU5YZP1uMuBvZusvmU63cb4I0T/view"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="education-document-link education-document-link-small">
+
+                                            <i data-lucide="external-link" class="w-3.5 h-3.5">
+                                            </i>
+
+                                            View Certificate
+
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- Yüksek Onur — Spring -->
+                                <article class="education-achievement-card education-achievement-purple">
+
+                                    <div class="education-achievement-header">
+
+                                        <div>
+
+                                            <h4 class="font-bold text-slate-100 text-lg">
+
+                                                Yüksek Onur Öğrencisi
+
+                                            </h4>
+
+                                            <p class="text-purple-400 text-sm font-semibold mt-1">
+
+                                                2025 - 2026 Academic Year · Spring Semester
+
+                                            </p>
+
+                                        </div>
+
+                                        <span class="education-achievement-icon education-achievement-icon-purple"
+                                            aria-hidden="true">
+
+                                            <i data-lucide="award" class="w-5 h-5">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+
+                                        Academic honor recognition awarded by Anadolu University
+                                        for outstanding academic achievement.
+
+                                    </p>
+
+
+                                    <div class="mt-5">
+
+                                        <a href="https://drive.google.com/file/d/1Pws2UkVMki3ioFBflZhoWcHXPZf_O9WP/view"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="education-document-link education-document-link-small">
+
+                                            <i data-lucide="external-link" class="w-3.5 h-3.5">
+                                            </i>
+
+                                            View Certificate
+
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- Onur — 2024-2025 Spring -->
+                                <article class="education-achievement-card education-achievement-purple">
+
+                                    <div class="education-achievement-header">
+
+                                        <div>
+
+                                            <h4 class="font-bold text-slate-100 text-lg">
+
+                                                Onur Öğrencisi
+
+                                            </h4>
+
+                                            <p class="text-purple-400 text-sm font-semibold mt-1">
+
+                                                2024 - 2025 Academic Year · Spring Semester
+
+                                            </p>
+
+                                        </div>
+
+                                        <span class="education-achievement-icon education-achievement-icon-purple"
+                                            aria-hidden="true">
+
+                                            <i data-lucide="award" class="w-5 h-5">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+
+                                        Academic honor recognition awarded by Anadolu University
+                                        for academic achievement.
+
+                                    </p>
+
+
+                                    <div class="mt-5">
+
+                                        <a href="https://drive.google.com/file/d/1JxY7suGYmq9rhTLLdZNPMMz3P_XWP_bs/view"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="education-document-link education-document-link-small">
+
+                                            <i data-lucide="external-link" class="w-3.5 h-3.5">
+                                            </i>
+
+                                            View Certificate
+
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- Graduation Honor -->
+                                <article class="education-achievement-card education-achievement-pink">
+
+                                    <div class="education-achievement-header">
+
+                                        <div>
+
+                                            <h4 class="font-bold text-slate-100 text-lg">
+
+                                                Onur Öğrencisi — Graduation
+
+                                            </h4>
+
+                                            <p class="text-pink-400 text-sm font-semibold mt-1">
+
+                                                2025 - 2026 Academic Year · Graduation Honor
+
+                                            </p>
+
+                                        </div>
+
+                                        <span class="education-achievement-icon education-achievement-icon-pink"
+                                            aria-hidden="true">
+
+                                            <i data-lucide="graduation-cap" class="w-5 h-5">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+
+                                        Graduation honor recognition awarded by Anadolu University
+                                        upon successful completion of the Web Design and Coding program.
+
+                                    </p>
+
+
+                                    <div class="mt-5">
+
+                                        <a href="https://drive.google.com/file/d/1kdD7hRd9WeHISdz0aXCIAOfES2p4HCDq/view"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="education-document-link education-document-link-pink education-document-link-small">
+
+                                            <i data-lucide="external-link" class="w-3.5 h-3.5">
+                                            </i>
+
+                                            View Certificate
+
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================================
+                 Continuous Learning
+                 ===================================================== -->
+
+                    <div class="education-timeline-item">
+
+                        <!-- Timeline Point -->
+                        <div class="education-timeline-point education-point-pink" aria-hidden="true">
+                        </div>
+
+
+                        <!-- Timeline Content -->
+                        <div class="education-timeline-content">
+
+                            <!-- Label -->
+                            <div
+                                class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-pink-400 mb-3">
+
+                                <span class="education-label-icon education-label-icon-pink">
+
+                                    <i data-lucide="book-open" class="w-4 h-4">
+                                    </i>
+
+                                </span>
+
+                                Continuous Learning
+
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">
+
+                                Learning & Activities
+
+                            </h3>
+
+
+                            <!-- Cloud Soft -->
+                            <article class="education-learning-card">
+
+                                <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+
+                                    <div class="education-learning-icon shrink-0">
+
+                                        <i data-lucide="code-2" class="w-5 h-5">
+                                        </i>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <h4 class="font-bold text-slate-100 text-lg">
+
+                                            Continued Learning — Cloud Soft
+
+                                        </h4>
+
+                                        <p class="text-pink-400 text-sm font-semibold mb-3 mt-1">
+
+                                            Web Development & Programming
+
+                                        </p>
+
+                                        <p class="text-slate-400 text-sm leading-relaxed">
+
+                                            Continuously developing my web development and programming
+                                            skills through learning, practice, and technical projects
+                                            on the Cloud Soft educational platform.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+
+            <!-- Section Heading -->
+            <div class="mb-12">
+
+                <p class="skills-eyebrow">
+                    My Expertise
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold section-title text-white">
+                    Skills & Tech Stack
+                </h2>
+
+                <p class="skills-description mt-4 max-w-2xl leading-relaxed">
+                    Technologies and tools I use to build responsive, modern, and user-friendly web experiences.
+                </p>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- Unified Skills Panel -->
+            <!-- ========================= -->
+
+            <div class="skills-panel">
+
+                <div class="skills-grid">
+
+                    <!-- HTML -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/html.webp" alt="HTML5" loading="lazy">
+                        </div>
+
+                        <span>HTML5</span>
+
+                    </div>
+
+
+                    <!-- CSS -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/css-removebg-preview.webp" alt="CSS3" loading="lazy">
+                        </div>
+
+                        <span>CSS3</span>
+
+                    </div>
+
+
+                    <!-- JavaScript -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/js.webp" alt="JavaScript" loading="lazy">
+                        </div>
+
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <!-- React -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/react-removebg-preview.webp" alt="React" loading="lazy">
+                        </div>
+
+                        <span>React</span>
+
+                    </div>
+
+
+                    <!-- Responsive -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/responsive.webp" alt="Responsive Web Design" loading="lazy">
+                        </div>
+
+                        <span>Responsive Design</span>
+
+                    </div>
+
+
+                    <!-- Tailwind -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/tailwind-removebg-preview.webp" alt="Tailwind CSS" loading="lazy">
+                        </div>
+
+                        <span>Tailwind CSS</span>
+
+                    </div>
+
+
+                    <!-- Bootstrap -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/boot-removebg-preview.webp" alt="Bootstrap" loading="lazy">
+                        </div>
+
+                        <span>Bootstrap</span>
+
+                    </div>
+
+
+                    <!-- Sass -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/sass.webp" alt="Sass" loading="lazy">
+                        </div>
+
+                        <span>Sass</span>
+
+                    </div>
+
+
+                    <!-- Photoshop -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/ps.webp" alt="Adobe Photoshop" loading="lazy">
+                        </div>
+
+                        <span>Adobe Photoshop</span>
+
+                    </div>
+
+
+                    <!-- Git & GitHub And -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/git and github.webp" alt="Git & GitHub" loading="lazy">
+                        </div>
+
+                        <span>Git & GitHub</span>
+
+                    </div>
+
+
+                    <!-- VS Code -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/vs code.webp" alt="Visual Studio Code" loading="lazy">
+                        </div>
+
+                        <span>VS Code</span>
+
+                    </div>
+
+
+                    <!-- npm -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/npm.webp" alt="npm" loading="lazy">
+                        </div>
+
+                        <span>npm</span>
+
+                    </div>
+
+
+                    <!-- Vercel -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/versel.webp" alt="Vercel" loading="lazy">
+                        </div>
+
+                        <span>Vercel</span>
+
+                    </div>
+
+
+                    <!-- GitHub Pages -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/github pages.webp" alt="GitHub Pages" loading="lazy">
+                        </div>
+
+                        <span>GitHub Pages</span>
+
+                    </div>
+
+
+                    <!-- WordPress -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/wp.webp" alt="WordPress" loading="lazy">
+                        </div>
+
+                        <span>WordPress</span>
+
+                    </div>
+
+
+                    <!-- Firebase -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/firebase.webp" alt="Firebase" loading="lazy">
+                        </div>
+
+                        <span>Firebase</span>
+
+                    </div>
+
+
+                    <!-- REST APIs -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/rest apis.webp" alt="REST APIs" loading="lazy">
+                        </div>
+
+                        <span>REST APIs</span>
+
+                    </div>
+
+
+                    <!-- Strapi -->
+                    <div class="skill-item">
+
+                        <div class="skill-bubble">
+                            <img src="img/strapi.webp" alt="Strapi" loading="lazy">
+                        </div>
+
+                        <span>Strapi</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5. Experience -->
+        <section id="experience" class="py-24 px-6">
+
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Section Heading -->
+                <div class="mb-12">
+
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-purple-400 mb-3">
+                        My Experience
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold section-title text-white">
+                        Work Experience
+                    </h2>
+
+                    <p class="mt-4 max-w-2xl text-slate-400 leading-relaxed">
+                        Practical experience in technical support, web development, and student guidance.
+                    </p>
+
+                </div>
+
+
+                <!-- Experience Timeline -->
+                <div class="space-y-12 mt-12">
+
+                    <!-- Cloud Soft -->
+                    <div class="relative pl-8 md:pl-10 border-l border-purple-500/20 w-full md:w-[90%] group">
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute w-4 h-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full -left-[8.5px] top-1
+                    shadow-[0_0_18px_rgba(168,85,247,0.6)]
+                    ring-4 ring-[#0f0018]
+                    group-hover:scale-110 transition-transform duration-300">
+                        </div>
+
+
+                        <!-- Job Title -->
+                        <h3 class="text-2xl md:text-3xl font-bold text-white
+                    leading-tight mb-3
+                    group-hover:text-purple-300
+                    transition-colors duration-300">
+
+                            Technical Student Supervisor
+
+                            <span class="text-purple-400">
+                                (Volunteer)
+                            </span>
+
+                        </h3>
+
+
+                        <!-- Company + Date -->
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-1 mb-6">
+
+                            <p class="font-semibold text-lg text-slate-200
+                        flex items-center">
+
+                                <i data-lucide="graduation-cap" class="w-4 h-4 mr-2 text-purple-400">
+                                </i>
+
+                                Cloud Soft Educational Platform
+
+                            </p>
+
+
+                            <span class="text-slate-700 hidden sm:inline-block">
+                                |
+                            </span>
+
+
+                            <p class="text-slate-500
+                        text-sm font-medium flex items-center">
+
+                                <i data-lucide="calendar" class="w-4 h-4 mr-1.5 text-slate-500">
+                                </i>
+
+                                01/06/2025 – 01/03/2026
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- Experience Card -->
+                        <div class="glass-card p-5 md:p-6
+                    border border-purple-500/12
+                    hover:border-purple-500/30
+                    hover:-translate-y-1
+                    transition-all duration-300">
+
+                            <ul class="space-y-4">
+
+                                <!-- Responsibility 1 -->
+                                <li class="flex items-start">
+
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-purple-400
+                                flex-shrink-0 mt-0.5">
+                                    </i>
+
+                                    <span class="text-slate-400
+                                leading-relaxed">
+
+                                        Troubleshot and resolved students' technical and coding
+                                        issues related to
+                                        <strong class="text-slate-200">
+                                            HTML, CSS, JavaScript, and web development
+                                        </strong>.
+
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Responsibility 2 -->
+                                <li class="flex items-start">
+
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-purple-400
+                                flex-shrink-0 mt-0.5">
+                                    </i>
+
+                                    <span class="text-slate-400
+                                leading-relaxed">
+
+                                        Reviewed and corrected code, identified technical errors,
+                                        and guided students toward practical solutions.
+
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Responsibility 3 -->
+                                <li class="flex items-start">
+
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-purple-400
+                                flex-shrink-0 mt-0.5">
+                                    </i>
+
+                                    <span class="text-slate-400
+                                leading-relaxed">
+
+                                        Provided technical support for website development tasks,
+                                        project issues, and programming-related questions.
+
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Responsibility 4 -->
+                                <li class="flex items-start">
+
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-purple-400
+                                flex-shrink-0 mt-0.5">
+                                    </i>
+
+                                    <span class="text-slate-400
+                                leading-relaxed">
+
+                                        Explained web development concepts and helped students
+                                        understand and resolve coding problems.
+
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Responsibility 5 -->
+                                <li class="flex items-start">
+
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 mr-3 text-purple-400
+                                flex-shrink-0 mt-0.5">
+                                    </i>
+
+                                    <span class="text-slate-400
+                                leading-relaxed">
+
+                                        Supported students throughout their learning process
+                                        by providing technical guidance and troubleshooting assistance.
+
+                                    </span>
+
+                                </li>
+
+                            </ul>
+
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2 pt-5 mt-5
+                        border-t border-purple-500/10">
+
+                                <span class="skill-tag text-[10px] font-bold">
+                                    HTML5
+                                </span>
+
+                                <span class="skill-tag text-[10px] font-bold">
+                                    CSS3
+                                </span>
+
+                                <span class="skill-tag text-[10px] font-bold">
+                                    JavaScript
+                                </span>
+
+                                <span class="skill-tag text-[10px] font-bold">
+                                    Web Development
+                                </span>
+
+                                <span class="skill-tag text-[10px] font-bold">
+                                    Technical Support
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- 6. What I Can Build -->
+        <section id="services" class="py-24 px-6 relative overflow-hidden">
+
+            <!-- Background Decorative Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 blur-[110px] pointer-events-none rounded-full">
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-pink-500/5 blur-[110px] pointer-events-none rounded-full">
+            </div>
+
+
+            <div class="max-w-5xl mx-auto relative z-10">
+
+                <!-- Section Heading -->
+                <div class="text-center mb-16">
+
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-purple-400 mb-3">
+                        My Capabilities
+                    </p>
+
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mx-auto block w-fit text-white">
+                        What I Can Build
+                    </h2>
+
+                    <p class="mt-4 text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        Practical web development capabilities I have developed through
+                        academic learning, personal projects, and hands-on experience.
+                    </p>
+
+                </div>
+
+
+                <!-- Capabilities Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+
+
+                    <!-- Capability 1 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-purple-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-purple-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-purple-500/8 rounded-full blur-3xl
+                    group-hover:bg-purple-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-purple-500/8
+                    rounded-xl w-fit mb-6
+                    border border-purple-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="monitor-smartphone" class="w-8 h-8 text-purple-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-purple-300
+                    transition-colors">
+
+                            Responsive Websites
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Building responsive and user-friendly websites that adapt
+                            smoothly across desktop, tablet, and mobile devices.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-purple-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-purple-400
+                        uppercase tracking-widest">
+
+                                HTML • CSS • JavaScript • Responsive Design
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Capability 2 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-pink-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-pink-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-pink-500/8 rounded-full blur-3xl
+                    group-hover:bg-pink-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-pink-500/8
+                    rounded-xl w-fit mb-6
+                    border border-pink-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="component" class="w-8 h-8 text-pink-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-pink-300
+                    transition-colors">
+
+                            React Interfaces
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Creating modern and interactive interfaces with React
+                            using reusable components and structured UI development.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-pink-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-pink-400
+                        uppercase tracking-widest">
+
+                                React • JavaScript • Components
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Capability 3 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-purple-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-purple-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-purple-500/8 rounded-full blur-3xl
+                    group-hover:bg-purple-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-purple-500/8
+                    rounded-xl w-fit mb-6
+                    border border-purple-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="palette" class="w-8 h-8 text-purple-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-purple-300
+                    transition-colors">
+
+                            Modern UI Development
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Developing clean and modern user interfaces using
+                            utility-first and component-based styling approaches.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-purple-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-purple-400
+                        uppercase tracking-widest">
+
+                                Tailwind CSS • Bootstrap • Sass
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Capability 4 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-pink-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-pink-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-pink-500/8 rounded-full blur-3xl
+                    group-hover:bg-pink-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-pink-500/8
+                    rounded-xl w-fit mb-6
+                    border border-pink-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="plug" class="w-8 h-8 text-pink-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-pink-300
+                    transition-colors">
+
+                            API-Integrated Web Apps
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Integrating web interfaces with external data sources
+                            and backend services through APIs and modern web tools.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-pink-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-pink-400
+                        uppercase tracking-widest">
+
+                                REST APIs • Strapi • Firebase
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Capability 5 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-purple-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-purple-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-purple-500/8 rounded-full blur-3xl
+                    group-hover:bg-purple-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-purple-500/8
+                    rounded-xl w-fit mb-6
+                    border border-purple-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="layout-dashboard" class="w-8 h-8 text-purple-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-purple-300
+                    transition-colors">
+
+                            CMS & Content Websites
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Creating and managing web content using WordPress
+                            and content management systems for practical web projects.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-purple-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-purple-400
+                        uppercase tracking-widest">
+
+                                WordPress • CMS • Web Content
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Capability 6 -->
+                    <div class="flex flex-col p-8 rounded-2xl glass-card
+                border border-pink-500/12
+                group hover:-translate-y-2
+                hover:shadow-2xl hover:shadow-pink-500/10
+                transition-all duration-300
+                relative overflow-hidden">
+
+                        <div class="absolute -right-10 -top-10 w-40 h-40
+                    bg-pink-500/8 rounded-full blur-3xl
+                    group-hover:bg-pink-500/15
+                    transition-colors pointer-events-none">
+                        </div>
+
+
+                        <div class="p-4 bg-pink-500/8
+                    rounded-xl w-fit mb-6
+                    border border-pink-500/15
+                    group-hover:scale-110
+                    transition-transform duration-300">
+
+                            <i data-lucide="wrench" class="w-8 h-8 text-pink-400">
+                            </i>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-bold mb-3
+                    text-white
+                    group-hover:text-pink-300
+                    transition-colors">
+
+                            Web Troubleshooting
+
+                        </h3>
+
+
+                        <p class="text-slate-400
+                    leading-relaxed mb-6">
+
+                            Reviewing code, identifying technical issues, and
+                            troubleshooting common HTML, CSS, JavaScript, and
+                            web development problems.
+
+                        </p>
+
+
+                        <div class="mt-auto pt-5
+                    border-t border-pink-500/10">
+
+                            <p class="text-[11px] font-bold
+                        text-pink-400
+                        uppercase tracking-widest">
+
+                                Debugging • Code Review • Technical Support
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- 7. Projects -->
+        <section id="projects" class="py-24 px-6 max-w-5xl mx-auto">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold section-title mx-auto block w-fit">
+                    Featured Projects
+                </h2>
+
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    A showcase of my web development projects, responsive interfaces, modern UI implementations, and
+                    practical web applications.
+                </p>
+            </div>
+
+            <div id="projects-grid" class="grid md:grid-cols-2 gap-8">
+
+                <!-- Project 1 - Book Store -->
+                <div
+                    class="group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/book-store.webp" alt="Book Store"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-cyan-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-cyan-400/50">
+                                React
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors flex items-center justify-between">
+
+                            <span>Book Store</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 flex-grow">
+                            A responsive book store built with React and integrated with Strapi and REST APIs for
+                            dynamic content and data management.
+                        </p>
+
+                        <p class="text-[11px] text-amber-600 dark:text-amber-400 mb-4">
+                            ⏳ The first visit may take a little longer while the project loads its data.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                React
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Redux Toolkit
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Strapi
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                REST API
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://book-store-ruddy.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/book-store" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 2 - Console Store -->
+                <div
+                    class="group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/console.webp" alt="Console Store"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-green-400/50">
+                                Tailwind CSS
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors flex items-center justify-between">
+
+                            <span>Console Store</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive console store interface built with HTML, CSS, Tailwind CSS, and JavaScript.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Tailwind CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://tailwindcss-challenge-main.vercel.app/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/tailwindcss-challenge-main" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 3 - Real Estate -->
+                <div
+                    class="group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/real.webp" alt="Real Estate Website"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-yellow-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-yellow-400/50">
+                                Sass
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors flex items-center justify-between">
+
+                            <span>Real Estate</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive real estate website built with HTML, CSS, Sass, and JavaScript.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Sass
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://real-estate-sass-main.vercel.app/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/RealEstate-SASS-main" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 4 - Dashboard -->
+                <div
+                    class="group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/dash.webp" alt="Dashboard"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-red-400/50">
+                                Bootstrap
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors flex items-center justify-between">
+
+                            <span>Dashboard</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive dashboard interface built with HTML, CSS, Bootstrap, and JavaScript.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Bootstrap
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://dashboard-main-weld.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/dashboard-main" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 5 - FCB Store -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/fcn.webp" alt="FCB Store"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-blue-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-blue-400/50">
+                                Bootstrap
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-between">
+
+                            <span>FCB Store</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive football store interface built with HTML, CSS, Bootstrap, and JavaScript.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Bootstrap
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://fcb-challenge-main.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/fcb-challenge--main" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 6 - Company Project -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/copmany.webp" alt="Company Project"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-purple-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-purple-400/50">
+                                HTML & CSS
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors flex items-center justify-between">
+
+                            <span>Company Project</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive company website interface developed with HTML and CSS.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://firs-project-1-main.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/firs-project-1-main" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 7 - LMS -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/lms.webp" alt="LMS"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-indigo-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-indigo-400/50">
+                                Tailwind CSS
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center justify-between">
+
+                            <span>LMS</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A responsive learning management system interface built with HTML, CSS, and Tailwind CSS.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Tailwind CSS
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://lms-chi-ochre.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/LMS" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 8 - Coffee Project -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/coffee.webp" alt="Coffee Project"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-amber-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-amber-400/50">
+                                HTML & CSS
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors flex items-center justify-between">
+
+                            <span>Coffee Project</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A clean coffee website interface built with HTML and CSS.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                HTML
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CSS
+                            </span>
+
+                        </div>
+
+                        <div class="flex gap-3">
+
+                            <a href="https://coffee-sable-five.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                LIVE DEMO
+                            </a>
+
+                            <a href="https://github.com/ismailhalvi/Coffee" target="_blank" rel="noopener noreferrer"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-bold rounded-lg transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                GITHUB
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 9 - WordPress Project -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden bg-slate-900">
+
+                        <img src="img/wp2.webp" alt="WordPress Project"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20 pointer-events-none">
+                            <span
+                                class="px-3 py-1 bg-pink-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-pink-400/50">
+                                WordPress
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors flex items-center justify-between">
+
+                            <span>WordPress Project</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A WordPress website project presented through a short project walkthrough video.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                WordPress
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                CMS
+                            </span>
+
+                        </div>
+
+                        <a href="img/wp-vid.mp4" target="_blank" rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-lg transition-colors">
+
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                            WATCH PROJECT
+
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- Project 10 - Photoshop Design -->
+                <div data-project-extra
+                    class="hidden group flex flex-col glass-card border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-300 bg-white/40 dark:bg-slate-800/40">
+
+                    <div class="h-56 relative overflow-hidden">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+
+                        <img src="img/ps2.webp" alt="Photoshop Design"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+                        <div class="absolute top-4 left-4 z-20">
+                            <span
+                                class="px-3 py-1 bg-violet-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-violet-400/50">
+                                Photoshop
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3
+                            class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors flex items-center justify-between">
+
+                            <span>Photoshop Design</span>
+
+                            <i data-lucide="arrow-up-right"
+                                class="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all">
+                            </i>
+
+                        </h3>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                            A graphic design project created using Adobe Photoshop.
+                        </p>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-700/50 flex flex-wrap gap-2 mb-5">
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Adobe Photoshop
+                            </span>
+
+                            <span
+                                class="text-[10px] font-bold bg-slate-100 dark:bg-slate-700/80 text-slate-700 dark:text-slate-300 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-600">
+                                Graphic Design
+                            </span>
+
+                        </div>
+
+                        <a href="https://drive.google.com/file/d/1C86Rso7gz6VIxSrbAXaaP52lNUT6FWFD/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold rounded-lg transition-colors">
+
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            VIEW DESIGN
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Show More / Show Less -->
+            <div class="flex justify-center mt-12">
+
+                <button id="show-more-projects" type="button"
+                    class="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-sm font-bold transition-all">
+
+                    <span>SHOW MORE PROJECTS</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- 8. Achievements & Milestones -->
+        <section id="achievements" class="py-24 px-6 relative overflow-hidden">
+
+            <!-- Background Decorations -->
+            <div class="achievement-glow achievement-glow-left absolute pointer-events-none"></div>
+
+            <div class="achievement-glow achievement-glow-right absolute pointer-events-none"></div>
+
+
+            <div class="max-w-5xl mx-auto relative z-10">
+
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mx-auto block w-fit">
+                        Achievements & Milestones
+                    </h2>
+
+                    <p class="achievement-description mt-4 max-w-2xl mx-auto">
+                        A selection of academic achievements and professional milestones from my journey in web
+                        development.
+                    </p>
+
+                </div>
+
+
+                <!-- Achievements Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+                    <!-- Achievement 1 -->
+                    <div
+                        class="achievement-card p-6 rounded-2xl group text-center flex flex-col items-center relative overflow-hidden">
+
+                        <div class="achievement-card-glow absolute inset-0 pointer-events-none"></div>
+
+
+                        <div
+                            class="achievement-icon-wrap w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all z-10">
+
+                            <i data-lucide="award" class="achievement-icon w-7 h-7 transition-colors"></i>
+
+                        </div>
+
+
+                        <h3 class="achievement-title text-lg font-bold mb-2 z-10">
+                            High Honor Student
+                        </h3>
+
+
+                        <p class="achievement-meta text-sm font-semibold mb-2 z-10">
+                            2025–2026 Fall
+                        </p>
+
+
+                        <p class="achievement-description text-sm leading-relaxed z-10">
+                            Recognized as a High Honor Student at Anadolu University during the Fall semester.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Achievement 2 -->
+                    <div
+                        class="achievement-card p-6 rounded-2xl group text-center flex flex-col items-center relative overflow-hidden">
+
+                        <div class="achievement-card-glow absolute inset-0 pointer-events-none"></div>
+
+
+                        <div
+                            class="achievement-icon-wrap w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all z-10">
+
+                            <i data-lucide="award" class="achievement-icon w-7 h-7 transition-colors"></i>
+
+                        </div>
+
+
+                        <h3 class="achievement-title text-lg font-bold mb-2 z-10">
+                            High Honor Student
+                        </h3>
+
+
+                        <p class="achievement-meta text-sm font-semibold mb-2 z-10">
+                            2025–2026 Spring
+                        </p>
+
+
+                        <p class="achievement-description text-sm leading-relaxed z-10">
+                            Recognized as a High Honor Student at Anadolu University during the Spring semester.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Achievement 3 -->
+                    <div
+                        class="achievement-card p-6 rounded-2xl group text-center flex flex-col items-center relative overflow-hidden">
+
+                        <div class="achievement-card-glow absolute inset-0 pointer-events-none"></div>
+
+
+                        <div
+                            class="achievement-icon-wrap w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all z-10">
+
+                            <i data-lucide="graduation-cap" class="achievement-icon w-7 h-7 transition-colors"></i>
+
+                        </div>
+
+
+                        <h3 class="achievement-title text-lg font-bold mb-2 z-10">
+                            Honor Student — Graduation
+                        </h3>
+
+
+                        <p class="achievement-meta text-sm font-semibold mb-2 z-10">
+                            2025–2026
+                        </p>
+
+
+                        <p class="achievement-description text-sm leading-relaxed z-10">
+                            Graduated from Anadolu University with an Associate Degree in Web Design and Coding.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Achievement 4 -->
+                    <div
+                        class="achievement-card p-6 rounded-2xl group text-center flex flex-col items-center relative overflow-hidden">
+
+                        <div class="achievement-card-glow absolute inset-0 pointer-events-none"></div>
+
+
+                        <div
+                            class="achievement-icon-wrap w-14 h-14 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-all z-10">
+
+                            <i data-lucide="laptop" class="achievement-icon w-7 h-7 transition-colors"></i>
+
+                        </div>
+
+
+                        <h3 class="achievement-title text-lg font-bold mb-2 z-10">
+                            Technical Student Supervisor
+                        </h3>
+
+
+                        <p class="achievement-meta text-sm font-semibold mb-2 z-10">
+                            Cloud Soft · 2025–2026
+                        </p>
+
+
+                        <p class="achievement-description text-sm leading-relaxed z-10">
+                            Supported students with web development, coding issues, troubleshooting, and technical
+                            guidance.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- 9. Contact -->
+        <section id="contact" class="py-24 px-6 relative overflow-hidden">
+
+            <!-- Background Atmosphere -->
+            <div class="contact-glow contact-glow-left absolute pointer-events-none"></div>
+
+            <div class="contact-glow contact-glow-right absolute pointer-events-none"></div>
+
+
+            <div class="max-w-6xl mx-auto relative z-10">
+
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+
+                    <h2 class="text-3xl md:text-5xl font-bold section-title mx-auto block w-fit">
+                        Contact Me
+                    </h2>
+
+                    <p class="contact-section-description mt-4 max-w-2xl mx-auto text-lg">
+                        Have a project in mind or want to work together?
+                        <br>
+                        Let's connect and discuss how I can help bring your ideas to life through modern and responsive
+                        web development.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Contact Layout -->
+                <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+
+                    <!-- =================================================
+                 LEFT — CONTACT INFO
+                 ================================================= -->
+
+                    <div class="contact-info-card lg:col-span-2 flex flex-col space-y-8 p-8 rounded-3xl">
+
+                        <!-- Intro -->
+                        <div>
+
+                            <!-- Availability -->
+                            <div
+                                class="contact-status inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+
+                                <span class="contact-status-dot relative flex h-2 w-2 mr-2"></span>
+
+                                Available for Freelance
+
+                            </div>
+
+
+                            <h3 class="contact-heading text-2xl font-bold mb-2">
+                                Direct Contact
+                            </h3>
+
+
+                            <p class="contact-copy text-sm leading-relaxed">
+                                Have a question, project idea, or collaboration opportunity?
+                                Feel free to reach out directly or connect with me through my professional networks.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Contact Details -->
+                        <div class="space-y-4">
+
+
+                            <!-- Email -->
+                            <a href="mailto:ismailhalvi1010@gmail.com" class="contact-detail group">
+
+                                <div class="contact-detail-icon">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+
+
+                                <div>
+
+                                    <p class="contact-detail-label">
+                                        Email
+                                    </p>
+
+                                    <p class="contact-detail-value">
+                                        ismailhalvi1010@gmail.com
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+
+
+                            <!-- Location -->
+                            <div class="contact-detail group cursor-default">
+
+                                <div class="contact-detail-icon">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+
+
+                                <div>
+
+                                    <p class="contact-detail-label">
+                                        Location
+                                    </p>
+
+                                    <p class="contact-detail-value">
+                                        Turkey
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Social Links -->
+                        <div class="contact-socials">
+
+                            <p class="contact-socials-label">
+                                Professional Presence
+                            </p>
+
+
+                            <div class="flex gap-4">
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/ismail-halvi-8080092b4" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn" class="contact-social">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="contact-social-icon">
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM3.555 20.452h3.558V9H3.555v11.452z" />
+                                    </svg>
+
+                                </a>
+
+
+                                <!-- GitHub -->
+                                <a href="https://github.com/ismailhalvi" target="_blank" rel="noopener noreferrer"
+                                    aria-label="GitHub" class="contact-social">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="contact-social-icon">
+                                        <path
+                                            d="M12 .297a12 12 0 0 0-3.79 23.39c.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6.006 0c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.625-5.475 5.922.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.825.576A12 12 0 0 0 12 .297" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- =================================================
+                 RIGHT — CONTACT FORM
+                 ================================================= -->
+
+                    <div class="lg:col-span-3 relative">
+
+
+                        <!-- Form Glow -->
+                        <div class="contact-form-glow absolute"></div>
+
+
+                        <!-- Form Card -->
+                        <div class="contact-form-card relative rounded-[2rem] p-8 md:p-10">
+
+                            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+
+                                <!-- Web3Forms Access Key -->
+                                <input type="hidden" name="access_key" value="YOUR_EXISTING_ACCESS_KEY">
+
+
+                                <!-- Email Subject -->
+                                <input type="hidden" name="subject" value="New Message from Ismail Halvi Portfolio">
+
+
+                                <!-- Form Name -->
+                                <input type="hidden" name="from_name" value="Ismail Halvi Portfolio">
+
+
+
+                                <!-- Name + Email -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+
+                                    <!-- Name -->
+                                    <div class="contact-field relative">
+
+                                        <input type="text" name="Name" id="name" placeholder=" " required>
+
+                                        <label for="name">
+                                            Full Name
+                                        </label>
+
+                                    </div>
+
+
+
+                                    <!-- Email -->
+                                    <div class="contact-field relative">
+
+                                        <input type="email" name="Email" id="email" placeholder=" " required>
+
+                                        <label for="email">
+                                            Email Address
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Project Interest -->
+                                <div class="contact-interest">
+
+                                    <p class="contact-field-label">
+                                        Project Interest
+                                    </p>
+
+
+                                    <div class="flex flex-wrap gap-3">
+
+
+                                        <!-- Responsive Website -->
+                                        <label class="contact-option">
+
+                                            <input type="radio" name="Interest" value="Responsive Website"
+                                                class="sr-only">
+
+                                            <span>
+                                                Responsive Website
+                                            </span>
+
+                                        </label>
+
+
+
+                                        <!-- React Development -->
+                                        <label class="contact-option">
+
+                                            <input type="radio" name="Interest" value="React Development"
+                                                class="sr-only">
+
+                                            <span>
+                                                React Development
+                                            </span>
+
+                                        </label>
+
+
+
+                                        <!-- UI Development -->
+                                        <label class="contact-option">
+
+                                            <input type="radio" name="Interest" value="UI Development" class="sr-only"
+                                                checked>
+
+                                            <span>
+                                                UI Development
+                                            </span>
+
+                                        </label>
+
+
+
+                                        <!-- WordPress / CMS -->
+                                        <label class="contact-option">
+
+                                            <input type="radio" name="Interest" value="WordPress / CMS" class="sr-only">
+
+                                            <span>
+                                                WordPress / CMS
+                                            </span>
+
+                                        </label>
+
+
+
+                                        <!-- Other -->
+                                        <label class="contact-option">
+
+                                            <input type="radio" name="Interest" value="Other" class="sr-only">
+
+                                            <span>
+                                                Other
+                                            </span>
+
+                                        </label>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Message -->
+                                <div class="contact-field contact-message-field relative">
+
+                                    <textarea name="Message" id="message" rows="4" placeholder=" " required></textarea>
+
+                                    <label for="message">
+                                        Tell me about your project or idea...
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="contact-submit group">
+
+                                    Send Message
+
+                                    <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+
+                                </button>
+
+
+
+                                <!-- Privacy / Response Note -->
+                                <p class="contact-form-note">
+
+                                    <i data-lucide="lock" class="w-3 h-3 inline mr-1"></i>
+
+                                    I'll get back to you as soon as possible.
+
+                                </p>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <!-- 11. Thank You -->
+    <footer class="footer-section py-12 px-6 text-center">
+
+        <div class="max-w-3xl mx-auto">
+
+            <h3 class="footer-title text-2xl font-bold mb-4">
+                Thanks for visiting my portfolio.
+            </h3>
+
+
+            <p class="footer-description mb-6 max-w-2xl mx-auto">
+                Thank you for taking the time to explore my work.
+                I look forward to growing as a Front-End Developer and building meaningful digital experiences.
+            </p>
+
+
+            <p class="footer-quote font-mono">
+                “Keep learning. Keep building.”
+            </p>
+
+
+            <p class="footer-copyright mt-8 uppercase tracking-widest">
+                &copy; 2026 Ismail Halvi • Front-End Developer
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
