@@ -4,9 +4,12 @@ module.exports = {
         "./index.html",
         "./js/**/*.js"
     ],
+
     darkMode: "class",
+
     theme: {
         extend: {}
     },
+
     plugins: []
 };
