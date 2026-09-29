@@ -301,3 +301,6 @@ if (themeBtn) {
         });
 
     });
+window.addEventListener("DOMContentLoaded", () => {
+    lucide.createIcons();
+});
