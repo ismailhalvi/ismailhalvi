@@ -33,15 +33,21 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="img/fav.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -53,7 +59,7 @@
 
     <canvas id="canvas-bg"></canvas>
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card rounded-none border-t-0 border-x-0" aria-label="Primary Navigation">
+    <nav id="main-navbar" class="fixed top-0 left-0 right-0 w-full z-[9999]" aria-label="Primary Navigation">
 
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
@@ -245,7 +251,7 @@
                 class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center relative z-10">
 
                 <!-- RIGHT ON DESKTOP / TOP ON MOBILE: Profile -->
-               <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
                     <!-- Profile Ambient Glow -->
                     <div class="hero-profile-glow" aria-hidden="true">
                     </div>
@@ -265,13 +271,12 @@
                         <!-- Clickable Profile -->
                         <button id="hero-profile-button" type="button" class="hero-profile-button"
                             aria-label="Enlarge Ismail Halvi profile photo" aria-pressed="false">
-<img
-    src="img/me.webp"
-    alt="Ismail Halvi"
-    id="profile-img"
-    class="w-full h-full object-cover"
-    fetchpriority="high"
-    decoding="async">
+                            <img src="img/me.webp" srcset="
+        img/me-400.webp 400w,
+        img/me-600.webp 600w,
+        img/me.webp 800w
+    " sizes="(max-width: 1023px) 80vw, 455px" alt="Ismail Halvi" id="profile-img" class="w-full h-full object-cover"
+                                fetchpriority="high" decoding="async">
 
                         </button>
 
@@ -2114,9 +2119,12 @@
                             class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
                         </div>
 
-                        <img src="img/book-store.webp" alt="Book Store"
+                        <img src="img/book-store.webp" srcset="
+        img/book-store-400.webp 400w,
+        img/book-store-600.webp 600w,
+        img/book-store.webp 800w
+    " sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 624px" alt="Book Store"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-
                         <div class="absolute top-4 left-4 z-20">
                             <span
                                 class="px-3 py-1 bg-cyan-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-cyan-400/50">
@@ -2202,10 +2210,12 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
                         </div>
-
-                        <img src="img/console.webp" alt="Console Store"
+                        <img src="img/console.webp" srcset="
+        img/console-400.webp 400w,
+        img/console-600.webp 600w,
+        img/console.webp 800w
+    " sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 624px" alt="Console Store"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-
                         <div class="absolute top-4 left-4 z-20">
                             <span
                                 class="px-3 py-1 bg-green-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-green-400/50">
@@ -2287,10 +2297,12 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
                         </div>
-
-                        <img src="img/real.webp" alt="Real Estate Website"
+                        <img src="img/real.webp" srcset="
+        img/real-400.webp 400w,
+        img/real-600.webp 600w,
+        img/real.webp 800w
+    " sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 624px" alt="Real Estate Website"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-
                         <div class="absolute top-4 left-4 z-20">
                             <span
                                 class="px-3 py-1 bg-yellow-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-yellow-400/50">
@@ -2373,9 +2385,12 @@
                             class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent z-10 group-hover:opacity-70 transition-opacity duration-300">
                         </div>
 
-                        <img src="img/dash.webp" alt="Dashboard"
+                        <img src="img/dash.webp" srcset="
+        img/dash-400.webp 400w,
+        img/dash-600.webp 600w,
+        img/dash.webp 800w
+    " sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 624px" alt="Dashboard"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-
                         <div class="absolute top-4 left-4 z-20">
                             <span
                                 class="px-3 py-1 bg-red-600/90 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow-lg backdrop-blur-md border border-red-400/50">
@@ -3464,6 +3479,18 @@
     </footer>
     <script src="js/lucide.min.js" defer></script>
     <script src="js/script.js"></script>
+
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+        <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- WhatsApp Floating Button -->
+    <a id="whatsapp-button" href="https://wa.me/905433344979" target="_blank" rel="noopener noreferrer"
+        aria-label="Contact me on WhatsApp" title="Contact me on WhatsApp">
+        <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+
 </body>
 
 </html>
